@@ -1,6 +1,8 @@
 package com.study.offer.OneToTen;
 
 
+import java.util.HashSet;
+
 public class One {
    /**  剑指 Offer 03:
          找出数组中重复的数字。
@@ -16,7 +18,15 @@ public class One {
 
    public static void main(String[] args) {
        int[] nums={2, 3, 1, 0, 2, 5, 3};
-       findRepeatNumber(nums);
+       //findRepeatNumber(nums);
+       int num = oneZjp(nums);
+       if(num==-1){
+           System.out.println("没有重复数据！！！");
+       }else if(num==-2){
+           System.out.println("数据超出了限制！！！");
+       }else {
+           System.out.println("重复数据为："+num);
+       }
    }
 
     /**
@@ -30,4 +40,28 @@ public class One {
         return 1;
     }
 
+    /*
+    *@author ZJP
+    *@Description
+    *@param
+    *@return
+    *@data 2021-04-14 15:18
+    */
+    private static int oneZjp(int[] array){
+        int num=-1;
+        HashSet<Integer> arraySet = new HashSet<>();
+        if(array.length>=2 &&  array.length<=100000) {
+            //把数组放到hashSet中可以去重
+            for (int i : array) {
+                //如果添加不进去证明是重复数据
+                if(!arraySet.add(i)){
+                    num=i;
+                    break;
+                }
+            }
+        }else {
+            num=-2;
+        }
+        return num;
+    }
 }
