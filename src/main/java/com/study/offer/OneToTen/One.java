@@ -18,7 +18,6 @@ public class One {
 
    public static void main(String[] args) {
        int[] nums={2, 3, 1, 0, 2, 5, 3};
-       //findRepeatNumber(nums);
        int num = oneZjp(nums);
        if(num==-1){
            System.out.println("没有重复数据！！！");
@@ -53,4 +52,76 @@ public class One {
         }
         return num;
     }
+
+            /***
+             **************************************************************
+             *                                                            *
+             *   .=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.       *
+             *    |                     ______                     |      *
+             *    |                  .-"      "-.                  |      *
+             *    |                 /            \                 |      *
+             *    |     _          |              |          _     |      *
+             *    |    ( \         |,  .-.  .-.  ,|         / )    |      *
+             *    |     > "=._     | )(__/  \__)( |     _.=" <     |      *
+             *    |    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |      *
+             *    |           "=._"(_     ^^     _)"_.="           |      *
+             *    |               "=\__|IIIIII|__/="               |      *
+             *    |              _.="| \IIIIII/ |"=._              |      *
+             *    |    _     _.="_.="\          /"=._"=._     _    |      *
+             *    |   ( \_.="_.="     `--------`     "=._"=._/ )   |      *
+             *    |    > _.="                            "=._ <    |      *
+             *    |   (_/                                    \_)   |      *
+             *    |                                                |      *
+             *    '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='      *
+             *                                                            *
+             *           LASCIATE OGNI SPERANZA, VOI CH'ENTRATE           *
+             *                      MCP出品、必属废品                     *
+             **************************************************************
+             */
+
+    /**
+     * @Author  MCP
+     * @Description
+     * @Date  2021/4/15 15:44
+     * @Param  [array]
+     * @return int
+     **/
+    public static int program1(int[] array){
+        //初始化一个长度相同的数组
+        int[] temp = new int[array.length];
+        //遍历数组，把array的值作为temp的下标，给该下标的temp的值+1，再进行判断temp[array[i]]。如果大于1肯定重复。
+        for(int i = 0; i < array.length; i++){
+            temp[array[i]]++;
+            if(temp[array[i]] > 1) return array[i];
+        }
+        return -1;
+    }
+
+    /**
+     * @Author  MCP
+     * @Description
+     * @Date  2021/4/15 15:44
+     * @Param  [array]
+     * @return int
+     **/
+   /*
+    补充知识：while语句属于循环语句，在判断时，如果条件为true，则会继续判断，直到false为止，即会进行多次判断（除非一开始条件就是错的）
+    if语句属于条件判断语句，如果条件是true，则继续执行，为false则跳出语句不执行，只会进行单次判断。所以此处用外圈判断用while。
+    {2, 3, 1, 0, 0, 4} 测试数据
+        */
+   //若无重复数字，则nums[i]=i；否则，有些位置空缺，有些位置存在多个数字。因此，可以利用将原数组重排归位的方法，判断重复数字。
+    public static int program2(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            while (array[i] != i) {
+                if (array[i] == array[array[i]]) {
+                    return array[i];
+                }
+                int tmp = array[i];
+                array[i] = array[tmp];
+                array[tmp] = tmp;
+            }
+        }
+        return -1;
+    }
+
 }
