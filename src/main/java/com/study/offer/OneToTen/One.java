@@ -29,17 +29,6 @@ public class One {
        }
    }
 
-    /**
-     * @Author  MCP
-     * @Description
-     * @Date  2021/4/13 17:32
-     * @Param
-     * @return
-     **/
-    public static int findRepeatNumber(int[] nums) {
-        return 1;
-    }
-
     /*
     *@author ZJP
     *@Description
