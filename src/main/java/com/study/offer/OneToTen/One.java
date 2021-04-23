@@ -75,13 +75,14 @@ public class One {
              *    '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='      *
              *                                                            *
              *           LASCIATE OGNI SPERANZA, VOI CH'ENTRATE           *
-             *                      MCP出品、必属废品                     *
+             *                   进来的人，放弃一切希望                   *
+             *                     MCP出品、必属废品                      *
              **************************************************************
              */
 
     /**
      * @Author  MCP
-     * @Description
+     * @Description  时间复杂度O(n)
      * @Date  2021/4/15 15:44
      * @Param  [array]
      * @return int
@@ -99,7 +100,7 @@ public class One {
 
     /**
      * @Author  MCP
-     * @Description
+     * @Description  不是最优解。垃圾
      * @Date  2021/4/15 15:44
      * @Param  [array]
      * @return int
