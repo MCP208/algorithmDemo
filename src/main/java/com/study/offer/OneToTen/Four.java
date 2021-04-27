@@ -1,5 +1,6 @@
 package com.study.offer.OneToTen;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -147,4 +148,57 @@ public class Four {
         }
         return array;
     }
+
+
+    /***
+     **************************************************************
+     *                                                            *
+     *   .=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.       *
+     *    |                     ______                     |      *
+     *    |                  .-"      "-.                  |      *
+     *    |                 /            \                 |      *
+     *    |     _          |              |          _     |      *
+     *    |    ( \         |,  .-.  .-.  ,|         / )    |      *
+     *    |     > "=._     | )(__/  \__)( |     _.=" <     |      *
+     *    |    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |      *
+     *    |           "=._"(_     ^^     _)"_.="           |      *
+     *    |               "=\__|IIIIII|__/="               |      *
+     *    |              _.="| \IIIIII/ |"=._              |      *
+     *    |    _     _.="_.="\          /"=._"=._     _    |      *
+     *    |   ( \_.="_.="     `--------`     "=._"=._/ )   |      *
+     *    |    > _.="                            "=._ <    |      *
+     *    |   (_/                                    \_)   |      *
+     *    |                                                |      *
+     *    '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='      *
+     *                                                            *
+     *           LASCIATE OGNI SPERANZA, VOI CH'ENTRATE           *
+     *                   进来的人，放弃一切希望                   *
+     *                     MCP出品、必属废品                      *
+     **************************************************************
+     */
+
+    /***
+     * @Author  MCP
+     * @Description  递归方式
+     * @Date  2021/4/26 15:21
+     * @Param  [head]
+     * @return int[]
+     **/
+    ArrayList<Integer> list = new ArrayList<>();
+    public int[] reversePrint(ListNode head) {
+        recur(head);
+        int size = list.size();
+        int[] array = new int[size];
+        for(int i = 0; i < size; i++) {
+            array[i] = list.get(i);
+        }
+        return array;
+    }
+    void recur(ListNode node) {
+        if(node == null) return;
+        recur(node.next);
+        list.add(node.val);
+    }
+
+
 }
