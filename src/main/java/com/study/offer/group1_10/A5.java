@@ -1,4 +1,4 @@
-package com.study.offer.OneToTen;
+package com.study.offer.group1_10;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author ZJP
  * @create 2021-04-15 15:47
  */
-public class Five {
+public class A5 {
 
     /**
      * 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -53,7 +53,7 @@ public class Five {
         int []  preorder={3,9,20,15,7};
         int []  inorder={9,3,15,20,7};
 
-        Five five = new Five();
+        A5 five = new A5();
         TreeNode treeNode = five.buildTree(preorder, inorder);
         System.out.println("返回二点二叉树是："+treeNode);
     }
