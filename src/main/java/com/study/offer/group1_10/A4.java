@@ -1,14 +1,13 @@
-package com.study.offer.OneToTen;
+package com.study.offer.group1_10;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Stack;
 
 /**
  * @author ZJP
  * @create 2021-04-15 10:22
  */
-public class Four {
+public class A4 {
     /**
      * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
      * <p>
@@ -117,7 +116,7 @@ public class Four {
     }
 
     public static void main(String[] args) {
-        Four four = new Four();
+        A4 four = new A4();
         //添加数据
       /*  four.addListNodeR(1);
         four.addListNodeR(2);

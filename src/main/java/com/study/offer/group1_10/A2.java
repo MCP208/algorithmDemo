@@ -1,10 +1,10 @@
-package com.study.offer.OneToTen;
+package com.study.offer.group1_10;
 
 /**
  * @author ZJP
  * @create 2021-04-14 16:47
  */
-public class Two {
+public class A2 {
 
     /**
      * 在一个 n * m 的二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
