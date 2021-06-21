@@ -29,6 +29,17 @@ public class A9 {
         System.out.println(minArray(numbers));
     }
 
+    private static int  NineZJP(int [] numbers){
+        //直接求数组中的最小数不就行了 为啥还要选择数组什么意思？
+        int n=numbers[0];
+        for (int i=1;i<numbers.length;i++){
+            if(numbers[i]<n){
+                n=numbers[i];
+            }
+        }
+        return n;
+    }
+
        /** 题解：
          *   给出的结构固定：旋转数组：---->考察：部分有序降低时间复杂度
          *  需要做的就是找到数组的临界值。然后拿到最小的数
