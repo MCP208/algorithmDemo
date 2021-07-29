@@ -29,8 +29,22 @@ public class A10 {
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
 
+    /**
+     *
+     * 题解：MCP
+     *      board:
+     *          A B C E      可以得到ABC
+     *          S F C S               |
+     *          A D E F    得到CED<—|  所以返回 true
+     *
+     * board：
+     *        a b
+     *        c d    没有路径，所以返回 false
+     *
+     *
+     */
     public static void main(String[] args) {
-       //题意都没有读懂 坐等春鹏大佬解释  算法真是太难了o(╥﹏╥)o
+        //题意都没有读懂 坐等春鹏大佬解释  算法真是太难了o(╥﹏╥)o
         char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         String word = "ABCCED";
         Solution solution = new Solution();
