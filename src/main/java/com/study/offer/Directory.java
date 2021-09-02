@@ -2,6 +2,7 @@ package com.study.offer;
 
 import com.study.offer.group11_20.*;
 import com.study.offer.group1_10.*;
+import com.study.offer.group21_30.*;
 
 /**
  * @Description: 此类为：LeetCode对应的题目目录
@@ -65,5 +66,35 @@ public class Directory {
 
         //剑指 Offer 19. 正则表达式匹配
         new A20();
+
+        //剑指 Offer 20. 表示数值的字符串
+        new A21();
+
+        //剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
+        new A22();
+
+        //剑指 Offer 22. 链表中倒数第k个节点
+        new A23();
+
+        //剑指 Offer 24. 反转链表
+        new A24();
+
+        //剑指 Offer 25. 合并两个排序的链表
+        new A25();
+
+        //剑指 Offer 26. 树的子结构
+        new A26();
+
+        //剑指 Offer 27. 二叉树的镜像
+        new A27();
+
+        //剑指 Offer 28. 对称的二叉树
+        new A28();
+
+        //剑指 Offer 29. 顺时针打印矩阵
+        new A29();
+
+        //剑指 Offer 30. 包含min函数的栈
+        new A30();
     }
 }
